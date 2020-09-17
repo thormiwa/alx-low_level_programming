@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - beginning point
- *
- * Return: should be 0 (Success)
+ * main - starts the code
+ * Description: prints with proper grammar, but the outcome is a piece of art
+ * Return: 0
  */
 
 int main(void)
 {
-  puts("%s", "with proper grammar, but the outcome is a piece of art,\n");
-  return (0);
+	printf("%s", "with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
 }
