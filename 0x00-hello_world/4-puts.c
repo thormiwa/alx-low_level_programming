@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - the point
- *
- * Return: should be 0 (Success)
+ *main - begins the code
+ *Description: prints "Programming is like building a multilingual puzzle
+ *Return: int
  */
+
 int main(void)
 {
   puts("\"Programming is like building a multilingual puzzle");
   return (0);
-} 
+}
