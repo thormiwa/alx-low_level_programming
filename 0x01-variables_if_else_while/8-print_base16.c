@@ -1,22 +1,20 @@
 #include <stdio.h>
-
 /**
- * main - Entry point for writing entire base16 number set
+ * main - print all hexadecimal numbers
  *
- * Return: Always 0 (Success)
+ * Description: Followed by the alphas in lower case
+ * Return: Always(0) Success
  */
 int main(void)
 {
-  char character;
+	char start;
+	char end;
 
-  for (character = '0' ; character <= '9' ; character++)
-    {
-      putchar(character);
-    }
-  for (character = 'a' ; character <= 'f' ; character++)
-    {
-      putchar(character);
-    }
-  putchar('\n');
-  return (0);
+	for (start = 0; start <= 9; start++)
+		putchar(start + '0');
+
+	for (end = 'a'; end <= 'f'; end++)
+		putchar(end);
+	putchar('\n');
+	return (0);
 }
