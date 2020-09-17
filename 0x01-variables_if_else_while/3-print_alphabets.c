@@ -1,24 +1,24 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - entry point
- * Return: always 0 (success)
+ * main - Prints lower case and upper case alphabets
+ *
+ * Description: They are sorted
+ * Return: Always(0) Success
  */
 int main(void)
 {
-  char c;
-  char C;
-  c = 'a';
-  C = 'A';
-  while (c <= 'z')
-    {
-      putchar (c);
-      c++;
-    }
-  while (C <= 'Z')
-    {
-      putchar (C);
-      C++;
-    }
-  putchar ('\n');
-  return (0);
+	char alphabet;
+
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	{
+		putchar(alphabet);
+	}
+
+	for (alphabet = 'A'; alphabet <= 'Z'; alphabet++)
+	{
+		putchar(alphabet);
+	}
+	putchar('\n');
+	return (0);
 }
