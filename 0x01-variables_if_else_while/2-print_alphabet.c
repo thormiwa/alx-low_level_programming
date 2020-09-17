@@ -1,19 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - prints all aphabets in lowercase
- *
- * Description: Alphabets are sorted
- * Return: Always(0) Success
+ * main - entry point
+ * Return: always 0 (success)
  */
 int main(void)
 {
-  char alphabet;
-
-  for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+  char c;
+  c = 'a';
+  while (c <= 'z')
     {
-      putchar(alphabet);
+      putchar (c);
+      c = c + 1;
     }
-  putchar('\n');
+  putchar ('\n');
   return (0);
 }

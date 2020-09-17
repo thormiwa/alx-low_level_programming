@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * main - Prints a list of alphabets
- * in reverse
- * Description: The reverse alphabets
+ *
+ * Description: The alphabets are in reverse order
  * Return: Always(0) Success
  */
 int main(void)

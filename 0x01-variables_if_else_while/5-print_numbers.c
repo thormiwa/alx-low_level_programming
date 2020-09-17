@@ -1,17 +1,16 @@
 #include <stdio.h>
-
 /**
- * main - single digits of base 10 number
- * Return:0
+ * main - entry point
+ * Return: always 0 (success)
  */
-
 int main(void)
 {
-  int i;
-  for (i = 0; i < 10; i++)
+  int b10;
+  while (b10 < 10)
     {
-      printf("%d", i);
+      printf("%d", b10);
+      b10++;
     }
-  printf("\n");
+  putchar ('\n');
   return (0);
 }

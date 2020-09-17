@@ -1,22 +1,22 @@
-#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - prints all lower case alphabets
- *
- * Description: q and e are excluded from the alphabets
- * Return: Always(0) Success
+ * main - entry point
+ * Return: always 0 (success)
  */
 int main(void)
 {
-  char alphabet;
-
-  for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-    {
-      if (alphabet == 'e' || alphabet == 'q')
-	continue;
-      else
-	putchar(alphabet);
-    }
-  putchar('\n');
+  char c;
+  c = 'a';
+  while (c <= 'z')
+    if (c != 'e' && c != 'q')
+      {
+	putchar (c);
+	c++;
+      }
+    else
+      {
+	c++;
+      }
+  putchar ('\n');
   return (0);
 }

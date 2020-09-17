@@ -1,24 +1,24 @@
-#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - Prints lower case then upper case alphabets
- *
- * Description: Alphabets A-Z
- * Return: Always(0) Success
+ * main - entry point
+ * Return: always 0 (success)
  */
 int main(void)
 {
-  char alphabet;
-
-  for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+  char c;
+  char C;
+  c = 'a';
+  C = 'A';
+  while (c <= 'z')
     {
-      putchar(alphabet);
+      putchar (c);
+      c++;
     }
-
-  for (alphabet = 'A'; alphabet <= 'Z'; alphabet++)
+  while (C <= 'Z')
     {
-      putchar(alphabet);
+      putchar (C);
+      C++;
     }
-  putchar('\n');
+  putchar ('\n');
   return (0);
 }

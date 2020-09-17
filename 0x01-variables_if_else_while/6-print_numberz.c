@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - Print all single digit numbers
+ * main - Prints all single digit numbers
  *
- * Description: Don't use the var char
+ * Description: Without using the var char
  * Return: Always(0) Success
  */
 int main(void)
