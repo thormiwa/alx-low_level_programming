@@ -1,16 +1,17 @@
 #include <stdio.h>
 /**
- * main - entry point
- * Return: always 0 (success)
+ * main - Prints a list of numbers
+ *
+ * Description: The numbers are all single digit
+ * Return: Always(0) Success
  */
 int main(void)
 {
-  int b10;
-  while (b10 < 10)
-    {
-      printf("%d", b10);
-      b10++;
-    }
-  putchar ('\n');
-  return (0);
+	char num;
+
+	for (num = 0; num <= 9; num++)
+		printf("%d", num);
+
+	putchar('\n');
+	return (0);
 }
