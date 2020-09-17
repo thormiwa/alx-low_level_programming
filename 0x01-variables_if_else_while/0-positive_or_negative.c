@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - beginning point for random number checker
- *
+ * main - entry point for random number checker
+ * Description - positive or negative
  * Return: 0
  */
 int main(void)
