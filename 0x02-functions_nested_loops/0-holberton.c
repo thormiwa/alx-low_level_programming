@@ -1,21 +1,19 @@
 #include "holberton.h"
-
 /**
- * main - printing the word Holberton
- *
- * Return: Always 0 (success)
- */
-
+*main - prints Holberton
+*Return: 0
+*/
 int main(void)
 {
-  char *school_name = "Holberton";
-  int letters = 0;
-
-  for (letters = 0; letters <= 8; letters++)
-    {
-      _putchar(school_name[letters]);
-    }
-  _putchar('\n');
-
-  return (0);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
+	return (0);
 }
