@@ -6,10 +6,10 @@
  */
 int _abs(int n)
 {
-  if (n >= 0)
-    return (n);
-  else
-    return (-1 * n);
+	if (n >= 0)
+		return (n);
+	else
+		return (-1 * n);
 }
 /**
  * print_last_digit - pritns the last digit of a number
@@ -18,9 +18,9 @@ int _abs(int n)
  */
 int print_last_digit(int n)
 {
-  int lastDigit;
+	int lastDigit;
 
-  lastDigit = _abs((n % 10));
-  _putchar(lastDigit + 48);
-  return (lastDigit);
+	lastDigit = _abs((n % 10));
+	_putchar(lastDigit + 48);
+	return (lastDigit);
 }
