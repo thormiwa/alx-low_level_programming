@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
  * print_alphabet - prints all alphabets in lowercase
  *
  * Description: They are sorted by default
  *
  */
+
 void print_alphabet(void)
 {
   char alphabet;
