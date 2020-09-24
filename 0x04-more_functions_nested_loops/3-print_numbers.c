@@ -7,18 +7,18 @@
 
 void print_numbers(void)
 {
-  int num;
+	int num;
 
-  char new_line;
+	char new_line;
 
-  new_line = '\n';
-  num = 0;
+	new_line = '\n';
+	num = 0;
 
-  while (num < 10)
-    {
-      _putchar(num + 48);
-      num++;
-    }
-  _putchar(new_line);
+	while (num < 10)
+	{
+		_putchar(num + 48);
+		num++;
+	}
+	_putchar(new_line);
 
 }
