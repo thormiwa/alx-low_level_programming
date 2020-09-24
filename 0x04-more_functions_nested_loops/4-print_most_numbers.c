@@ -1,20 +1,19 @@
 #include "holberton.h"
 
 /**
- * print_most_numbers - Entry Point. Prints numbers 0 - 9 !2 & 4
- * Return: This is a void function so there is no return value
+ * print_most_numbers - prints number 0-9 and exclude 2 and 4
+ * Return - void
  */
-
 void print_most_numbers(void)
 {
-  int numbers;
+	int i;
 
-  for (numbers = 48; numbers <= 57; numbers++)
-    {
-      if (numbers != 50 && numbers != 52)
+	for (i = 48; i < 58; i++)
 	{
-	  _putchar(numbers);
+		if (i == 50 ||  i == 52)
+			continue;
+		else
+			_putchar(i);
 	}
-    }
-  _putchar('\n');
+	_putchar('\n');
 }
