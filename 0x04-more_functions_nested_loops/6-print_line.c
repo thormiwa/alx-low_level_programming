@@ -1,15 +1,15 @@
 #include "holberton.h"
 
 /**
- * print_line - print line of variable length
+ * print_line - print a straight line
  * @n: length of line
  */
 void print_line(int n)
 {
-  int i;
+	int i;
 
-  if (n > 0)
-    for (i = 0; i < n; i++)
-      _putchar('_');
-  _putchar('\n');
+	if (n > 0)
+		for (i = 0; i < n; i++)
+			_putchar('_');
+	_putchar('\n');
 }
