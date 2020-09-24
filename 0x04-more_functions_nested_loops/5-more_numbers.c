@@ -1,28 +1,21 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * more_numbers - Entry Point. Prints numbers from 0 -14 ten times
- *
- * Return: returns nothing since function is void
+ * more_numbers - prints 0 to 14, ten times
+ * Return - void
  */
 void more_numbers(void)
 {
-  int i;
-  int b;
+	int i, j;
 
-  for (b = 0; b < 10; b++)
-    {
-      i = 0;
-      while (i <= 14)
+	for (i = 0; i < 10; i++)
 	{
-	  if (i >= 10)
-	    {
-	      _putchar(i / 10 + '0');
-	    }
-	  _putchar(i % 10 + '0');
-	  i++;
+		for (j = 0; j < 15; j++)
+		{
+			if (j >= 10)
+				_putchar(j / 10 + 48);
+			_putchar(j % 10 + 48);
+		}
+		_putchar('\n');
 	}
-      _putchar('\n');
-    }
 }
