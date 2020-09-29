@@ -1,0 +1,1 @@
+This directory contains the tasks about arrays,pointers and strings
