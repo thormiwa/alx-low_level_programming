@@ -9,13 +9,13 @@
 
 char *string_toupper(char *c)
 {
-  int x;
-  for (x = 0; c[x] != '\0'; x++)
-    {
-      if (c[x] >= 95 && c[x] <= 122)
-	{
-	  c[x] -= 32;
-	}
-    }
-  return (c);
+int x;
+for (x = 0; c[x] != '\0'; x++)
+{
+if (c[x] >= 95 && c[x] <= 122)
+{
+c[x] -= 32;
+}
+}
+return (c);
 }
