@@ -1,42 +1,33 @@
 #include "holberton.h"
 
 /**
- *cap_string - function that capitalizes first letter of all
- *words in a string
- *@s: The String Capitalized
- *Return: A string with all the first letters in
- *words are capitalized
+ * cap_string - Entry point. Word Capitalization Function
+ * @sentence: Pointer to a string whose words are to be capitalized
+ * Return: Returns capitalized string
  */
 
-char *cap_string(char *s)
+char *cap_string(char *sentence)
 {
-int x;
-x = 0;
+	int len;
 
-while (s[x])
-{
-while (!(s[x] >= 'a' && s[x] <= 'z'))
-x++;
-
-if (s[x - 1] == ' ' ||
-s[x - 1] == '\t' ||
-s[x - 1] == '\n' ||
-s[x - 1] == ',' ||
-s[x - 1] == ';' ||
-s[x - 1] == '.' ||
-s[x - 1] == '!' ||
-s[x - 1] == '?' ||
-s[x - 1] == '"' ||
-s[x - 1] == '(' ||
-s[x - 1] == ')' ||
-s[x - 1] == '{' ||
-s[x - 1] == '}' ||
-x == 0)
-s[x] -= 32;
-
-x++;
-}
-
-return (s);
-
+	len = 0;
+	for (; sentence[len] != '\0'; len++)
+	{
+		if (len == 0 && sentence[len] >= 97 && sentence[len] <= 122)
+		{
+			sentence[len] -= 32;
+		}
+		if (sentence[len] >= 97 && sentence[len] <= 122
+			&& (sentence[len - 1] == 32 || sentence[len - 1] == ','
+			|| sentence[len - 1] == ';' || sentence[len - 1] == '.'
+			|| sentence[len - 1] == '!' || sentence[len - 1] == '?'
+			|| sentence[len - 1] == '"' || sentence[len - 1] == '('
+			|| sentence[len - 1] == ')' || sentence[len - 1] == '{'
+			|| sentence[len - 1] == '}' || sentence[len - 1] == '\n'
+			|| sentence[len - 1] == '\t'))
+		{
+			sentence[len] -= 32;
+		}
+	}
+	return (sentence);
 }
