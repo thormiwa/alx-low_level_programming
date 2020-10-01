@@ -1,27 +1,27 @@
 #include "holberton.h"
 /**
  * _strcat - appends strings together
- * @dest: first parameter
+ * @destination: first parameter
  * @source: second parameter
  *
  * Return: Always(0) Success
  */
-char *_strcat(char *dest, char *source)
+char *_strcat(char *destination, char *source)
 {
-	char *add = dest;
+	char *add = destination;
 
-	while (*dest != '\0')
+	while (*destination != '\0')
 	{
-		dest++;
+		destination++;
 	}
 
 	while (*source != '\0')
 	{
-		*dest = *source;
-		dest++;
+		*destination = *source;
+		destination++;
 		source++;
 	}
 
-	*dest = '\0';
+	*destination = '\0';
 	return (add);
 }
