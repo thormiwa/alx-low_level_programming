@@ -8,22 +8,23 @@
 *Return: No return Value. Function is void
  */
 
-void print_diagsums(int* a, int size)
+void print_diagsums(int *a, int size)
 {
-    int x, sum1 = 0, sum2 = 0;
+	int m;
+	int sum_d1, sum_d2;
 
-    for (x = 0; x < size; x++)
-    {
-        sum1 += a[x];
-        a += size;
-    }
+	sum_d1 = 0;
+	sum_d2 = 0;
 
-    a -= size;
+	m = 0;
+	while (m < size)
+	{
+		sum_d1 += *(a + m * size + m);
+		sum_d2 += *(a + m * size + size - m - 1);
 
-    for (x = 0; x < size; x++)
-    {
-        sum2 += a[x];
-        a -= size;
-    }
-    printf("%d, %d", sum1, sum2);
+		m++;
+	}
+
+	printf("%d, %d\n", sum_d1, sum_d2);
+
 }
