@@ -1,0 +1,1 @@
+This directory contains more and more pointers and arrays exercises
