@@ -1,44 +1,63 @@
 #include "holberton.h"
 
-int find_strlen(char *s);
-int check_palindrome(char *s, int len, int index);
-int is_palindrome(char *s);
 
 /**
- * find_strlen - Returns the length of a string.
- * @s: The string to be measured.
- *
- * Return: The length of the string.
+ * check - compare
+ * @i: i
+ * @size: size
+ * @s: string
+ * @add: addition depending if n is odd or even
+ * Return: return value
  */
-int find_strlen(char *s)
+int check(char *s, int i, int size, int add)
 {
-	int len = 0;
 
-	if (*(s + len))
+	if (i + add == size  && s[i] == s[size])
 	{
-		len++;
-		len += find_strlen(s + len);
+		return (1);
 	}
 
-	return (len);
+	else if (s[i] == s[size])
+	{
+		return (check(s, i + 1, size - 1, add));
+	}
+
+	return (0);
+}
+
+
+/**
+ * is_palindrome - Checks of palindrone
+ * @r: string
+ * Return: 1 if true and 0 if not
+ */
+
+int is_palindrome(char *r)
+{
+
+	int i, s, add;
+
+	i = 0;
+	add = 0;
+
+	s = _strlen_recursion(r);
+
+	add = (s % 2 != 0) ? 2 : 1;
+
+	return (check(r, i, s - 1, add));
 }
 
 /**
- * check_palindrome - Checks if a string is a palindrome.
- * @s: The string to be checked.
- * @len: The length of s.
- * @index: The index of the string to be checked.
- *
- * Return: If the string is a palindrome - 1.
- *         If the string is not a palindrome - 0.
+ * _strlen_recursion - legth of a string
+ * @s: string
+ * Return: return legth
  */
-int check_palindrome(char *s, int len, int index)
+
+int _strlen_recursion(char *s)
 {
-	if (s[index] == s[len / 2])
-		return (1);
+	if (!*s)
+		return (0);
 
-	if (s[index] == s[len - index - 1])
-		return (check_palindrome(s, len, index + 1));
-
-	return (0);
+	else
+		return (1 + _strlen_recursion(s + 1));
 }
