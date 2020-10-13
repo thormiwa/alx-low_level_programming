@@ -1,28 +1,28 @@
-#include <stdlib.h>
 #include "holberton.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * create_array - Entry point. Creates an array of chars
- * @size: Size of the array
- * @c: Argumenet charaacters
- * Return: Pointer to the array, Null upon fail
- */
-
+ * create_array - create array of size size and assign char c
+ * @size: size of array
+ * @c: char to assign
+ * Description: creat array of size size and assign char c
+ * Return: pointer to array, NULL if fail
+ *
+ **/
 char *create_array(unsigned int size, char c)
 {
-	unsigned int a;
-	char *b;
+char *s;
+unsigned int i;
 
-	b = malloc(sizeof(char) * size);
+if (size <= 0)
+return (NULL);
 
-	if (size == 0 || p == NULL)
-		return (NULL);
+s = (char *)malloc(size * sizeof(char));
 
-	a = 0;
-	while (a < size)
-	{
-		b[a] = c;
-		++b;
-	}
-	return (b);
+if (s == NULL)
+return (NULL);
+for (i = 0; i < size; i++)
+s[i] = c;
+
+return (s);
 }
