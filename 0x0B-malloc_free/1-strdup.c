@@ -9,11 +9,11 @@
  **/
 int _strlen(char *s)
 {
-unsigned int a;
+unsigned int i;
 
-for (a = 0; s[a] != '\0'; a++)
+for (i = 0; s[i] != '\0'; i++)
 ;
-return (i + a);
+return (i + 1);
 }
 /**
  * _strdup - duplicate string
@@ -24,7 +24,7 @@ return (i + a);
 char *_strdup(char *str)
 {
 char *dest;
-unsigned int a;
+unsigned int i;
 
 if (str == NULL)
 return (NULL);
@@ -34,9 +34,9 @@ dest = (char *)malloc((_strlen(str)) * sizeof(char));
 if (dest == NULL)
 return (NULL);
 
-for (a = 0; str[a] != '\0'; a++)
-dest[a] = str[a];
-dest[a] = str[a];
+for (i = 0; str[i] != '\0'; i++)
+dest[i] = str[i];
+dest[i] = str[i];
 
 return (dest);
 }
