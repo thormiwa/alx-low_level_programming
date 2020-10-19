@@ -20,8 +20,8 @@ char *_strdup(char *s)
 		a++;
 
 		dup = malloc(a * sizeof(*dup));
-			if (dup == NULL)
-			return (NULL);
+		if (dup == NULL)
+		return (NULL);
 while (b < a)
 {
 dup[b] = s[b];
@@ -31,8 +31,6 @@ return (dup);
 }
 
 
-
-
 /**
 *new_dog - create an instance of struct dog.
 *@name:firt argument.
@@ -40,6 +38,7 @@ return (dup);
 *@owner: Third argument.
 *Return: instance of struct.
 */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
