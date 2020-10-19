@@ -9,24 +9,24 @@
 char *_strdup(char *s)
 {
 	char *dup;
-	unsigned int a = 0;
-	unsigned int b = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
 	if (s == NULL)
 		return (NULL);
 /*Get the length of the string.*/
-	while (s[a] != '\0')
-		a += 1;
+	while (s[i] != '\0')
+		i += 1;
 /*+1 to include the terminating character in size.*/
-	a++;
+	i++;
 
-	dup = malloc(a * sizeof(*dup));
+	dup = malloc(i * sizeof(*dup));
 	if (dup == NULL)
 		return (NULL);
-	while (b < a)
+	while (j < i)
 	{
-		dup[b] = s[b];
-		b++;
+		dup[j] = s[j];
+		j++;
 	}
 	return (dup);
 }
@@ -53,19 +53,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	if (newdog == NULL)
 		return (NULL);
-/*Assign name element of new struct*/
-	(*newdog).name = _strdup(name);
-	if ((*newdog).name == NULL)
+/*Assign name element of new struct to the copy of name.*/
+	newdog->name = _strdup(name);
+	if (newdog->name == NULL)
 	{
 		return (NULL);
 	}
-/*Assgin owner element of new struct.*/
-	(*newdog).owner = _strdup(owner);
-	if (*newdog).owner == NULL)
+/*Assgin owner element of new struct to the copy of ownwer.*/
+	newdog->owner = _strdup(owner);
+	if (newdog->owner == NULL)
 	{
 		return (NULL);
 	}
-	(*newdog).age = age;
+	newdog->age = age;
 
 	return (newdog);
 }
