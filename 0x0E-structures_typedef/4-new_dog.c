@@ -2,48 +2,58 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup - returns a pointer to space in memory containing copy of string.
- * @s: pointer to the string.
- * Return: Pointer to a string stored in memory.
+ * _strdup - returns a pointer to a newly allocated space in memory
+ * @str: first parameter
+ *
+ * Description: uses malloc
+ * Return: Always(0) Success
  */
-char *_strdup(char *s)
+char *_strdup(char *str)
 {
-	char *dup;
-	unsigned int i = 0;
-	unsigned int j = 0;
+	char *space;
+	char *new_string;
+	int len;
 
-	if (s == NULL)
-		return (NULL);
-/*Get the length of the string.*/
-	while (s[i] != '\0')
-		i += 1;
-/*+1 to include the terminating character in size.*/
-	i++;
-
-	dup = malloc(i * sizeof(*dup));
-	if (dup == NULL)
-		return (NULL);
-	while (j < i)
+	for (len = 0; str[len] != '\0'; len++)
 	{
-		dup[j] = s[j];
-		j++;
 	}
-	return (dup);
+
+	space = (char *) malloc(sizeof(char) * len + 1);
+
+	if (space == NULL)
+		return (NULL);
+
+	if (str == NULL)
+		return (NULL);
+
+
+	new_string = space;
+
+	while (*str)
+	{
+		*new_string = *str;
+		new_string++;
+		str++;
+	}
+	*new_string = '\0';
+
+	return (space);
 }
 
-
-
-
 /**
- *new_dog - create an instance of struct dog.
- *@name:firt argument.
- *@age:second argument.
- *@owner: Third argument.
- *Return: instance of struct.
+ * new_dog - function that initialize a variable of type struct dog
+ * @name: first parameter
+ * @age: second parameter
+ * @owner: third parameter
+ *
+ * Description: function that initialize a variable of type struct dog
+ * Return: Always(0) Success
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
+	char *nameCopy;
+	char *ownerCopy;
 
 	newdog = malloc(sizeof(struct dog));
 
@@ -51,21 +61,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
+
+	nameCopy = _strdup(name);
+	ownerCopy = _strdup(owner);
+
+	if (nameCopy == NULL || ownerCopy == NULL)
+	{
+		return (NULL);
+	}
+
+	(*newdog).name = nameCopy;
+	(*newdog).age = age;
+	(*newdog).owner = ownerCopy;
+
 	if (newdog == NULL)
 		return (NULL);
-/*Assign name element of new struct to the copy of name.*/
-	newdog->name = _strdup(name);
-	if (newdog->name == NULL)
-	{
-		return (NULL);
-	}
-/*Assgin owner element of new struct to the copy of ownwer.*/
-	newdog->owner = _strdup(owner);
-	if (newdog->owner == NULL)
-	{
-		return (NULL);
-	}
-	newdog->age = age;
 
 	return (newdog);
 }
