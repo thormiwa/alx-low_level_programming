@@ -1,22 +1,21 @@
 #include "holberton.h"
-
 /**
 * flip_bits - counts the number of bits to change
 * to get ine number to another
 * @n: number to start
 * @m: numbers to go through
-* Return: the number of flip
+* Return: the numbers of flips
 **/
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-		int a, bits;
+		int index, flip;
 
-			bits = 0;
-				for (a = 0; a < 64; a++)
+			flip = 0;
+				for (index = 0; index < 64; index++)
 {
-					if ((m >> a & 1) ^ (n >> a & 1))
-					bits++;
+				if ((m >> index & 1) ^ (n >> index & 1))
+				flip++;
 }
-					return (bits);
+				return (flip);
 }
